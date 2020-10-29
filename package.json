@@ -1,0 +1,32 @@
+{
+    "name": "e-com",
+    "version": "1.0.0",
+    "description": "",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server",
+        "server": "nodemon server/server",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\" ",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "data:import": "node server/seeder",
+        "data:destroy": "node server/seeder -d"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^5.0.0",
+        "colors": "^1.4.0",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "express-async-handler": "^1.1.4",
+        "jsonwebtoken": "^8.5.1",
+        "mongoose": "^5.10.10"
+    },
+    "devDependencies": {
+        "concurrently": "^5.3.0",
+        "nodemon": "^2.0.6"
+    }
+}
